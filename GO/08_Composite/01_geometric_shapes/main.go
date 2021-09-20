@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+// composite object
 type GraphicObject struct {
 	Name, Color string
 	Children    []GraphicObject
@@ -59,5 +60,5 @@ func main() {
 
 	drawing.Children = append(drawing.Children, *group)
 
-	fmt.Println(drawing.String())
+	fmt.Println(drawing.String()) // now even though drawing is a composite object as it embedds a lot of other Graphic Objects,it is still treated like a scalar object
 }
